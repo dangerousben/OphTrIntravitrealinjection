@@ -85,11 +85,11 @@ class DefaultController extends BaseEventTypeController
 	 * Set the default options based on episode and injection status for the patient
 	 *
 	 * (non-PHPdoc)
-	 * @see parent::setDefaultOptions()
+	 * @see parent::setElementOptions($action)
 	 */
-	protected function setDefaultOptions()
+	protected function setElementOptions($action)
 	{
-		parent::setDefaultOptions();
+		parent::setElementOptions($action);
 
 		// set any calculated defaults on the elements
 		$therapy_api = Yii::app()->moduleAPI->get('OphCoTherapyapplication');

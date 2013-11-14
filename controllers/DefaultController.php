@@ -91,6 +91,10 @@ class DefaultController extends BaseEventTypeController
 	{
 		parent::setElementOptions($action);
 
+		if ($action != "create") {
+			return;
+		}
+
 		// set any calculated defaults on the elements
 		$therapy_api = Yii::app()->moduleAPI->get('OphCoTherapyapplication');
 		$injection_api = Yii::app()->moduleAPI->get('OphTrIntravitrealinjection');

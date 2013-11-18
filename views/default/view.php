@@ -24,7 +24,7 @@
 
 	<?php
 		// Event actions
-		if ($this->canPrint()) {
+		if ($this->checkPrintAccess()) {
 			$this->event_actions[] = EventAction::button('Print', 'print',null,array('class'=>'button small'));}
 	?>
 
